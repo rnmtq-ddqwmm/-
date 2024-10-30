@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wisdom Academy - Offering a wealth of courses and events">
+    <title>Wisdom Academy</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Modal style */
+        .modal {
+            display: none; /* Default hidden */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 80%;
+            text-align: center;
+        }
+
+        .modal img {
+            max-width: 100%; /* Limit max image width */
+            height: auto;
+        }
+
+        /* Close button style */
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.jpeg" alt="Wisdom Academy Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="banner">
+            <h1 id="school-title">Welcome to Wisdom Academy</h1> <!-- Added id for identification -->
+            <p>Show your extraordinary wisdom</p>
+        </section>
+
+        <section class="features">
+            <h2>Our Features</h2>
+            <div class="feature-box">
+                <article class="feature">
+                    <h3>Meow Meow Courses</h3>
+                    <p>Enjoy a variety of meow meow courses anytime, anywhere.</p>
+                    <a href="courses.html" class="btn">Learn More</a>
+                </article>
+                <article class="feature">
+                    <h3>Wisdom Seminars</h3>
+                    <p>Join our wisdom seminars to enhance your insights and speech.</p>
+                    <a href="events.html" class="btn">Learn More</a>
+                </article>
+                <article class="feature">
+                    <h3>Courage Training</h3>
+                    <p>Empower yourself to showcase your wisdom.</p>
+                    <a href="events.html" class="btn">Learn More</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 114514810 Wisdom Academy | All Rights Reserved</p>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Use</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content">
+            <img src="back.webp" alt="Wisdom Academy Photo">
+        </div>
+    </div>
+
+    <script>
+        // Get the modal and elements
+        var modal = document.getElementById("myModal");
+        var title = document.getElementById("school-title");
+        var closeBtn = document.querySelector(".close");
+
+        // Show the modal when the title is clicked
+        title.onclick = function() {
+            modal.style.display = "flex"; 
+        }
+
+        // Hide the modal when the close button is clicked
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Hide the modal when clicking outside the modal
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
